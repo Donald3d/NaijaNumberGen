@@ -1,11 +1,11 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.donald.naijaNumberGen" version="1.0.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.donald.naijaNumberGen" version="1.1.0">
   <name>Naija Number Generator</name>
   <description>Generate Nigerian numbers </description>
   <author href="http://donald.com.ng" email="info@donald.com.ng">Donald Adugbe</author>
   <preference name="prerendered-icon" value="true"/>
   <content src="index.html"/>
   <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
-  <param name="URL_SCHEME" value="autojosh" />
+  <param name="URL_SCHEME" value="naijanumgen" />
 </gap:plugin>
 	<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
 	<gap:plugin name="com.appodeal.plugin" source="npm"/>
@@ -32,7 +32,7 @@
   <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2"/>
   <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0"/>
   <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1"/>
-	<plugin name="cordova-plugin-admobpro" source="npm" />
+	
    <icon src="icon.png" />
     <splash src="splash.png" />
   <platform name="android">
