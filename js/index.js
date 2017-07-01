@@ -56,10 +56,3 @@ var app = {
 //Ad unit ID: ca-app-pub-6744601018783724/8084503898 (int)
 
 
-
-
-
-
-
-
-AS IS
