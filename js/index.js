@@ -19,14 +19,7 @@
 var app = {
     // Application Constructor
     initialize: function() { 
-var appKey = "c8097523c4be390669e344b6b400225bd1b6428b9c83b08a";
-Appodeal.disableLocationPermissionCheck();
-Appodeal.initialize(appKey, Appodeal.INTERSTITIAL | Appodeal.SKIPPABLE_VIDEO | Appodeal.BANNER | Appodeal.REWARDED_VIDEO);
-Appodeal.show(Appodeal.BANNER_BOTTOM);
 
-function donshowint(){
-Appodeal.show(Appodeal.INTERSTITIAL);
-}
         this.bindEvents();
 
     },
@@ -69,3 +62,4 @@ Appodeal.show(Appodeal.INTERSTITIAL);
 
 
 
+AS IS
