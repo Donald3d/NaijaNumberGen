@@ -49,6 +49,11 @@ var app = {
 };
 
 
+//App ID ca-app-pub-6744601018783724~3654304290
+//Ad unit ID: ca-app-pub-6744601018783724/6607770695 (banner)
+//Ad unit ID: ca-app-pub-6744601018783724/8084503898 (int)
+
+
 
 var appKey = "c8097523c4be390669e344b6b400225bd1b6428b9c83b08a";
 Appodeal.disableLocationPermissionCheck();
