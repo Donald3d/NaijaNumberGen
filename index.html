@@ -301,6 +301,7 @@ window.plugins.socialsharing.share(document.getElementById("babies").innerHTML, 
 </body>
     <!--   Core JS Files   -->
       <script type="text/javascript" src="cordova.js"></script>
+    
    
 
     <script src="assets/js/jquery.min.js" type="text/javascript"></script>
@@ -369,24 +370,28 @@ jQuery('body').bind('click', function(e) {
 });
 
 
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    // select the right Ad Id according to platform
+    
+// it will display smart banner at top center, using the default options
+    
+    
+    
+    
+//Start Appodeal
+    
 var appKey = "c8097523c4be390669e344b6b400225bd1b6428b9c83b08a";
 Appodeal.disableLocationPermissionCheck();
+Appodeal.confirm(Appodeal.SKIPPABLE_VIDEO);
 Appodeal.initialize(appKey, Appodeal.INTERSTITIAL | Appodeal.SKIPPABLE_VIDEO | Appodeal.BANNER | Appodeal.REWARDED_VIDEO);
-Appodeal.show(Appodeal.BANNER_TOP);
-
-function donshowint(){
-Appodeal.show(Appodeal.INTERSTITIAL);
+Appodeal.show(Appodeal.BANNER_BOTTOM);
+    
+    
+//END ONDEVICE READY    
 }
 
-if(AdMob) AdMob. createBanner({
-adId: 'ca-app-pub-4636345347272784/1334983556' , // Paste the ad unit ID we've have copied earlier
-overlap : false,
-offsetTopBar: false ,
-adSize: 'SMART_BANNER' ,
-position: AdMob. AD_POSITION . BOTTOM_CENTER ,
-isTesting : false, // set to true, to receiving test ad for testing purpose
-bgColor : 'black' , // color name, or '#RRGGBB'
-});
+
 </script>
   
 
