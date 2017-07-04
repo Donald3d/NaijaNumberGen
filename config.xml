@@ -1,6 +1,6 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.donald.naijaNumberGen" version="1.3.0">
   <name>Naija Number Generator</name>
-  <description>Generate Nigerian numbers </description>
+  <description>Android app to generate Nigerian numbers free of charge</description>
   <author href="http://donald.com.ng" email="info@donald.com.ng">Donald Adugbe</author>
   <preference name="prerendered-icon" value="true"/>
   <content src="index.html"/>
