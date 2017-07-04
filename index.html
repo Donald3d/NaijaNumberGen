@@ -240,7 +240,21 @@ window.plugins.socialsharing.share(document.getElementById("babies").innerHTML, 
 <div class="form-group has-info">
 <textarea id="babies"  class="form-control "></textarea>
 <button class ="btn btn-info btn-round" onclick="NaijaNumCopyToClipboard()"><i class="fa fa-copy"></i> Copy</button>
-<p>If the copy button does not give options to copy to clipboard you can manually copy it by holding the numbers box down to copy</p>
+
+
+<div class="alert alert-warning">
+                <div class="container-fluid">
+                    <div class="alert-icon">
+                        <i class="material-icons">info_outline</i>
+                    </div>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true"><i class="material-icons">clear</i></span>
+                    </button>
+
+ If the copy button does not give options to copy to clipboard you can manually copy it by holding the numbers box down to copy                  
+                </div>
+            </div>
+
 </div>
 </div>
 
@@ -253,8 +267,8 @@ window.plugins.socialsharing.share(document.getElementById("babies").innerHTML, 
 
 
 
-
-
+<div  align="center"><p>After copying your text you can use the bulk sms service below .Ibulky is cheap and reliable !</p><a href="#" onClick="window.open('https://ibulky.com/?ref=donald3d', '_system')"><img src="assets/ibulky.jpg" width="300px" /></a>
+</div>
 
 </div><!-- end the col container -->
 </div><!--close container class  -->
@@ -310,7 +324,7 @@ window.plugins.socialsharing.share(document.getElementById("babies").innerHTML, 
 <!-- about modal begin -->
     <script type="text/javascript">
     function aboutAlert(){
- bootbox.alert("<div align='center'><b>Created By :</b> <br> Donald Adugbe <br><b>Contact:</b><br> <a class='text-info' href='mailto:info@donald.com.ng'><u>info@donald.com.ng</u></a><br>08182346055<br><a class='text-info' href='www.donald.com.ng'><u>www.donald.com.ng</u></a></div>");}
+ bootbox.alert("<div align='center'><b>Created By :</b> <br> Donald Adugbe <br><b>Contact:</b><br> <a class='text-info' href='mailto:info@donald.com.ng'><u>info@donald.com.ng</u></a><br>08182346055<br><a class='text-info' href='www.donald.com.ng'><u>www.donald.com.ng</u></a><br><b>Services:</b><p>Web Development</p><p>Mobile App Development etc.</p></div>");}
     </script>
 
     <script type="text/javascript">
@@ -360,7 +374,7 @@ Appodeal.disableLocationPermissionCheck();
 Appodeal.initialize(appKey, Appodeal.INTERSTITIAL | Appodeal.SKIPPABLE_VIDEO | Appodeal.BANNER);
 Appodeal.show(Appodeal.BANNER_BOTTOM);
 
-setTimeout(Appodeal.show(Appodeal.INTERSTITIAL), 15000);
+setTimeout(Appodeal.show(Appodeal.INTERSTITIAL), 20000);
     
     
 //END ONDEVICE READY    
