@@ -374,7 +374,12 @@ Appodeal.disableLocationPermissionCheck();
 Appodeal.initialize(appKey, Appodeal.INTERSTITIAL | Appodeal.SKIPPABLE_VIDEO | Appodeal.BANNER);
 Appodeal.show(Appodeal.BANNER_BOTTOM);
 
-setTimeout(Appodeal.show(Appodeal.INTERSTITIAL), 20000);
+Appodeal.enableInterstitialCallbacks(true);
+
+document.addEventListener('onInterstitialLoaded', function(){
+ alert('Int loaded !');
+Appodeal.show(Appodeal.INTERSTITIAL);
+});
     
     
 //END ONDEVICE READY    
