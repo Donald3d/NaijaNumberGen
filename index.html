@@ -371,14 +371,16 @@ function onDeviceReady() {
     
 var appKey = "c8097523c4be390669e344b6b400225bd1b6428b9c83b08a";
 Appodeal.disableLocationPermissionCheck();
-Appodeal.initialize(appKey, Appodeal.INTERSTITIAL | Appodeal.SKIPPABLE_VIDEO | Appodeal.BANNER);
+Appodeal.initialize(appKey, Appodeal.INTERSTITIAL | Appodeal.BANNER);
 Appodeal.show(Appodeal.BANNER_BOTTOM);
 
 Appodeal.enableInterstitialCallbacks(true);
 
 document.addEventListener('onInterstitialLoaded', function(){
- alert('Int loaded !');
-Appodeal.show(Appodeal.INTERSTITIAL);
+
+    setTimeout(Appodeal.show(Appodeal.INTERSTITIAL), 30000);
+
+    
 });
     
     
