@@ -148,7 +148,12 @@ return false;
 
 }
 
+function NaijaNumCopyToClipboard (){
 
+
+window.plugins.socialsharing.share(document.getElementById("babies").innerHTML, null, null, null) ;
+
+}
 
 
 
@@ -233,7 +238,7 @@ return false;
 
 <div class="content-block has-info"  align="center">
 <div class="form-group has-info">
-<textarea id="babies"  class="form-control" rows="8"></textarea>
+<textarea id="babies"  class="form-control "></textarea>
 <button class ="btn btn-info btn-round" onclick="NaijaNumCopyToClipboard()"><i class="fa fa-copy"></i> Copy</button>
 
 
@@ -262,7 +267,7 @@ return false;
 
 
 
-<div  align="center"><p>After copying your text you can use the bulk sms service below .Ibulky is cheap and reliable !</p><a href="#" onClick="window.open('https://ibulky.com/?ref=donald3d', '_system')"><img src="assets/ibulky.jpg" width="250px" /></a>
+<div  align="center"><p>After copying your text you can use the bulk sms service below .Ibulky is cheap and reliable !</p><a href="#" onClick="window.open('https://ibulky.com/?ref=donald3d', '_system')"><img src="assets/ibulky.jpg" width="300px" /></a>
 </div>
 
 </div><!-- end the col container -->
@@ -319,11 +324,11 @@ return false;
 <!-- about modal begin -->
     <script type="text/javascript">
     function aboutAlert(){
- bootbox.alert("<div align='center'><b>Created By :</b> <br> Donald Adugbe <br><b>Contact:</b><br> <a class='text-info' href='mailto:info@donald.com.ng'><u>info@donald.com.ng</u></a><br>08182346055<br><a class='text-info' href='http://www.donald.com.ng'><u>www.donald.com.ng</u></a><br><b>Services:</b><p>Web Development</p><p>Mobile App Development etc.</p><a class='text-info' href='http://sms1727.com'><u><small>Credits</small></u></a></div>");}
+ bootbox.alert("<div align='center'><b>Created By :</b> <br> Donald Adugbe <br><b>Contact:</b><br> <a class='text-info' href='mailto:info@donald.com.ng'><u>info@donald.com.ng</u></a><br>08182346055<br><a class='text-info' href='www.donald.com.ng'><u>http://www.donald.com.ng</u></a><br><b>Services:</b><p>Web Development</p><p>Mobile App Development etc.</p></div>");}
     </script>
 
     <script type="text/javascript">
-sms1727.com
+
 
 
 //get slider property and bind to a div
@@ -355,6 +360,9 @@ jQuery('body').bind('click', function(e) {
 
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
+    window.sessionStorage.donIntCount=1;
+var naijaInt= window.sessionStorage.donIntCount;
+
     // select the right Ad Id according to platform
     
 // it will display smart banner at top center, using the default options
@@ -366,15 +374,26 @@ function onDeviceReady() {
     
 var appKey = "c8097523c4be390669e344b6b400225bd1b6428b9c83b08a";
 Appodeal.disableLocationPermissionCheck();
-Appodeal.initialize(appKey, Appodeal.INTERSTITIAL | Appodeal.BANNER);
+Appodeal.initialize(appKey, Appodeal.INTERSTITIAL | Appodeal.SKIPPABLE_VIDEO | Appodeal.BANNER);
 Appodeal.show(Appodeal.BANNER_BOTTOM);
+
+Appodeal.enableInterstitialCallbacks(true);
+
+document.addEventListener('onInterstitialLoaded', function(){
+    window.sessionStorage.donIntCount=window.sessionStorage.donIntCount + 1 
+ if (window.sessionStorage.donIntCount<3)  { 
+ alert('Int loaded !');
+ setTimeout(Appodeal.show(Appodeal.INTERSTITIAL), 10000);
+}
+//end if
+    
+});
+    
+    
 //END ONDEVICE READY    
 }
 
-  function NaijaNumCopyToClipboard (){
-Appodeal.isLoaded(Appodeal.INTERSTITIAL, function(true){Appodeal.show(Appodeal.INTERSTITIAL);});  
-window.plugins.socialsharing.share(document.getElementById("babies").innerHTML, null, null, null);
-}
+
 </script>
   
 
