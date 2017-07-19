@@ -374,26 +374,25 @@ Appodeal.enableInterstitialCallbacks(true);
 
     
     
-    function NaijaNumCopyToClipboard (){
-
-    document.addEventListener('onInterstitialLoaded', function(){
-
-    Appodeal.show(Appodeal.INTERSTITIAL);
-
-    
-});
-    
-
-window.plugins.socialsharing.share(document.getElementById("babies").innerHTML, null, null, null) ;
-
-}
+  
     
     
     
 //END ONDEVICE READY    
 }
 
+  function NaijaNumCopyToClipboard (){
 
+    document.addEventListener('onInterstitialLoaded', function(){
+
+    Appodeal.show(Appodeal.INTERSTITIAL);
+
+});
+    
+
+window.plugins.socialsharing.share(document.getElementById("babies").innerHTML, null, null, null) ;
+
+}
 </script>
   
 
