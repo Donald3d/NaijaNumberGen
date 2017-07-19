@@ -238,7 +238,7 @@ window.plugins.socialsharing.share(document.getElementById("babies").innerHTML, 
 
 <div class="content-block has-info"  align="center">
 <div class="form-group has-info">
-<textarea id="babies"  class="form-control "></textarea>
+<textarea id="babies"  class="form-control" rows="8"></textarea>
 <button class ="btn btn-info btn-round" onclick="NaijaNumCopyToClipboard()"><i class="fa fa-copy"></i> Copy</button>
 
 
@@ -381,15 +381,16 @@ Appodeal.enableInterstitialCallbacks(true);
 
 document.addEventListener('onInterstitialLoaded', function(){
 
-    if(localStorage.getItem('naijIntShown') != '2' ){
- alert('Int loaded !');
+    if(sessionStorage.getItem('naijIntShown') != '2' ){
+ 
  setTimeout(Appodeal.show(Appodeal.INTERSTITIAL), 10000);
 }
     
 });
 document.addEventListener('onInterstitialShown', function(){
-localStorage.setItem('naijIntShown', '2');
-    var naijIntStatus = localStorage.getItem('naijIntShown');
+sessionStorage.setItem('naijIntShown', '2');
+    var naijIntStatus = sessionStorage.getItem('naijIntShown');
+   
 });
     
     
