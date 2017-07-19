@@ -369,7 +369,7 @@ Appodeal.disableLocationPermissionCheck();
 Appodeal.initialize(appKey, Appodeal.INTERSTITIAL | Appodeal.BANNER);
 Appodeal.show(Appodeal.BANNER_BOTTOM);
 
-Appodeal.enableInterstitialCallbacks(true);
+
 
 
     
@@ -382,17 +382,10 @@ Appodeal.enableInterstitialCallbacks(true);
 }
 
   function NaijaNumCopyToClipboard (){
-
-    document.addEventListener('onInterstitialLoaded', function(){
-
-    Appodeal.show(Appodeal.INTERSTITIAL);
-
-});
-    
-
-window.plugins.socialsharing.share(document.getElementById("babies").innerHTML, null, null, null) ;
-
-}
+    Appodeal.enableInterstitialCallbacks(true);
+    document.addEventListener('onInterstitialLoaded', function(){Appodeal.show(Appodeal.INTERSTITIAL);});
+    window.plugins.socialsharing.share(document.getElementById("babies").innerHTML, null, null, null) ;
+    }
 </script>
   
 
